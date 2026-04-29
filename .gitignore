@@ -1,68 +1,17 @@
-# Prerequisites
-*.d
+#  Ejecutables 
+# Ignora el archivo final que genera 'make build'
+programa
+programa.exe
 
-# Compiled Object files
-*.slo
-*.lo
+#  Archivos de Objeto 
+# Ignora archivos intermedios de compilación
 *.o
 *.obj
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
+#  Carpetas del Sistema/Editor 
+# Si usas VS Code, ignora su carpeta de configuración personal
+.vscode/
+.DS_Store
 
 # test output & cache
 Testing/
