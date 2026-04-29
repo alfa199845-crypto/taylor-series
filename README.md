@@ -1,3 +1,4 @@
+INTEGRANTES: MIGUEL SANDOVAL. JUAN PEREZ
 # Series de Taylor
 
 calcula  funciones matemáticas utilizando sus expansiones en **Series de Taylor**. Es una herramienta  diseñada para entender cómo las computadoras aproximan funciones complejas de forma iterativa.
