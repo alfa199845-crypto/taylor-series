@@ -1,36 +1,42 @@
-INTEGRANTES: MIGUEL SANDOVAL. JUAN PEREZ
-# Series de Taylor
+# Aproximación de Funciones: Series de Taylor
 
-calcula  funciones matemáticas utilizando sus expansiones en **Series de Taylor**. Es una herramienta  diseñada para entender cómo las computadoras aproximan funciones complejas de forma iterativa.
+**INTEGRANTES:** MIGUEL SANDOVAL, JUAN PEREZ
+
+Este proyecto implementa el cálculo de diversas funciones matemáticas utilizando sus expansiones en Series de Taylor. El software ha sido diseñado bajo una arquitectura modular en C++, separando la lógica de cálculo de la interfaz de usuario.
 
 ## Funciones Incluidas
 
-El programa calcula las siguientes aproximaciones:
-*   **Exponencial ($e^x$):** Suma infinita de potencias.
-*   **Seno ($\sin x$):** Serie alternante de potencias impares.
-*   **Coseno ($\cos x$):** Serie alternante de potencias pares.
-*   **Tangente ($\tan x$):** Calculada mediante la relación entre Seno y Coseno.
-*   **Raíz Cuadrada ($\sqrt{1+x}$):** Implementación mediante serie binomial para valores $|x| < 1$.
+El programa permite calcular aproximaciones para las siguientes funciones trascendentales:
+* **Exponencial ($e^x$):** Suma de potencias divididas por factoriales.
+* **Seno ($\sin x$):** Aproximación mediante términos alternantes de potencias impares.
+* **Coseno ($\cos x$):** Aproximación mediante términos alternantes de potencias pares.
+* **Tangente ($\tan x$):** Calculada a partir de la relación entre las series de Seno y Coseno.
+* **Raíz Cuadrada ($\sqrt{1+x}$):** Implementación mediante serie binomial para valores $|x| < 1$.
 
-##  Automatización con Makefile
+## Estructura del Proyecto
 
-Para evitar comandos largos en la consola, este proyecto utiliza un **Makefile** para gestionar el flujo de trabajo.
+El código fuente se divide en los siguientes componentes para facilitar la compilación separada:
+* **taylor.h**: Archivo de cabecera con los prototipos de las funciones.
+* **taylor.cpp**: Implementación técnica de los algoritmos de las series.
+* **main.cpp**: Punto de entrada del programa y visualización de resultados.
 
-| Comando | funcion |
-| `make build` | Compila el código fuente y genera el ejecutable `programa`. |
-| `make run` | Ejecuta el programa y muestra los resultados en la terminal. |
-| `make clean` | Elimina el archivo ejecutable para limpiar el entorno. |
+## Automatización con Makefile
 
-## Requisitos
+Se incluye un archivo Makefile para gestionar la construcción del binario.
 
-*   Compilador `g++`.
-*   Herramienta `make` instalada en el sistema.
+| Comando | Función |
+| `make build` | Compila el proyecto y genera el ejecutable `programa`. |
+| `make run` | Ejecuta el programa generado. |
+| `make clean` | Elimina el ejecutable y archivos temporales. |
+
+## Requisitos del Sistema
+
+* Compilador de C++ (g++) con soporte para el estándar C++11 o superior.
+* Utilidad GNU Make instalada.
 
 ## Notas Técnicas
 
-*   **Sin `using namespace std`**: Se utiliza el prefijo `std::` para garantizar la claridad y evitar conflictos de nombres.
-*   **Precisión**: Por defecto, el programa utiliza **10 términos** de la serie, lo cual ofrece un equilibrio entre velocidad y precisión para fines académicos.
-*   **Librerías**: Se hace uso de `<iostream>` para entrada/salida y `<cmath>` para operaciones matemáticas base.
-
-
-Desarrollado como parte de una tarea de programación y métodos numéricos.
+* **Modularización**: Se utiliza el esquema de archivos de cabecera (.h) para separar la lógica.
+* **Espacios de nombres**: Uso explícito de `std::` para mayor claridad técnica.
+* **Precisión**: Se utilizan 10 términos de serie por defecto para propósitos académicos.
+* **Librerías**: Uso de `<iostream>` para salida y `<cmath>` para operaciones de soporte.
